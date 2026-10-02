@@ -1,0 +1,6 @@
+// Azure Activity Log LAW Telemetry Query — 90-day retention query
+AzureActivity
+| where TimeGenerated >= ago(90d)
+| where ActivityStatusValue == "Success" or ActivityStatus == "Succeeded"
+| summarize ExecutionCount = count(), LastAuthenticated = max(TimeGenerated) by Caller, OperationName
+| order by Caller asc, ExecutionCount desc

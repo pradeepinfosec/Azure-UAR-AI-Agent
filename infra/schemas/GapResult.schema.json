@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GapResult",
+  "type": "object",
+  "properties": {
+    "user_upn": { "type": "string" },
+    "scope": { "type": "string" },
+    "provisioned_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "executed_actions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "unused_permissions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "risk_score": { "type": "number" },
+    "mitre_tactics": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["user_upn", "provisioned_actions", "executed_actions", "unused_permissions"]
+}

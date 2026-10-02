@@ -1,0 +1,14 @@
+{
+  "Name": "Custom-SimExtAuditor-LeastPrivilege",
+  "IsCustom": true,
+  "Description": "RAG Synthesized least-privilege role tailored for Sim-Ext-Auditor based on 90-day activity",
+  "Actions": [
+    "Microsoft.Resources/subscriptions/resourceGroups/read"
+  ],
+  "NotActions": [],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/subscriptions/efca2116-f6e1-430f-a854-27d4b4476efd"
+  ]
+}
